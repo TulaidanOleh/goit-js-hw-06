@@ -1,7 +1,3 @@
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
-
 const inputNumEl = document.querySelector("input");
 const createBtnEl = document.querySelector(`[data-create]`);
 const destroyBtnEl = document.querySelector(`[data-destroy]`);
@@ -10,6 +6,10 @@ const boxForElement = document.querySelector("#boxes");
 inputNumEl.addEventListener("input", inputChange);
 createBtnEl.addEventListener("click", createBoxes);
 destroyBtnEl.addEventListener("click", destroyBoxes);
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
 
 function inputChange() {
   if (inputNumEl.value < 1 || inputNumEl.value > 100) {
