@@ -20,13 +20,12 @@ function inputChange() {
   }
 }
 
-function createBoxes(amount) {
-  amount = inputNumEl.value;
+function createBoxes() {
   const elements = [];
 
-  for (let i = 0; i < amount; i += 1) {
+  for (let i = 0; i < inputNumEl.value; i += 1) {
     const width = 30 + i * 10;
-    const height = elWidth;
+    const height = width;
     const color = getRandomHexColor();
     const el = `<div style="width:${width}px;height:${height}px;background-color:${color}"></div>`;
     elements.push(el);
